@@ -7,6 +7,7 @@ import styles from './App.module.css';
 import Footer from './components/Footer'
 import Header from './components/Header'
 import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
 
 // interface 
 import { ITask } from './interfaces/ITask';
@@ -22,6 +23,10 @@ function App() {
         <div>
           <h2>O que você vai fazer?</h2>
           <TaskForm taskList={taskList} setTaskList={setTaskList} btnText="Criar tarefa" />
+        </div>
+        <div>
+          <h2>Suas tarefas:</h2>
+          <TaskList taskList={taskList} />
         </div>
       </main>
       <Footer />
